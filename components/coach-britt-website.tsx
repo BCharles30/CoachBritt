@@ -56,6 +56,12 @@ export default function CoachBrittWebsite() {
                 >
                   Explore Services
                 </a>
+                <a
+                  href="/clients"
+                  className="rounded-full border border-[#b88a2a] px-7 py-3 text-sm font-medium text-[#b88a2a] transition hover:bg-[#b88a2a] hover:text-white"
+                >
+                  Existing Clients
+                </a>
               </div>
             </div>
 
