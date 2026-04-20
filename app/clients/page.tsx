@@ -97,7 +97,7 @@ export default function ClientBookingPage() {
             <div className="rounded-[2rem] border border-black/5 bg-white p-8 text-left shadow-sm transition hover:shadow-md">
               <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#b88a2a]">Option 3</div>
               <h3 className="mt-3 text-xl font-semibold">Power Session</h3>
-              <p className="mt-2 text-sm text-black/60">15-minute focused session</p>
+              <p className="mt-2 text-sm text-black/60">30-minute focused session</p>
               <ul className="mt-4 space-y-2 text-sm text-black/70">
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#b88a2a]" />
@@ -118,7 +118,7 @@ export default function ClientBookingPage() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex w-full justify-center rounded-full bg-[#b88a2a] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
               >
-                Book 15 Min
+                Book 30 Min
               </a>
             </div>
           </div>
