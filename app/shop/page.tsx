@@ -1,4 +1,4 @@
-const CHECKOUT_URL = "https://your-checkout-link.com";
+const CHECKOUT_URL = "https://www.paypal.com/ncp/payment/YWZGHA7ZWPV58";
 const COACHING_URL = "https://coachbritt.xyz/clients";
 
 export default function CoachBrittProductPage() {
