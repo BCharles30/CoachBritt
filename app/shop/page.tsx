@@ -17,7 +17,7 @@ export default function CoachBrittProductPage() {
             <a href="/#services" className="transition hover:text-[#b88a2a]">Services</a>
             <a href="/#contact" className="transition hover:text-[#b88a2a]">Contact</a>
             <a href="/clients" className="transition hover:text-[#b88a2a]">Client Portal</a>
-            <a href="/shop" className="text-[#b88a2a]">Shop</a>
+            <a href="/shop" className="text-[#b88a2a]">The Scalable Offer Guide</a>
           </nav>
           <a
             href="https://calendly.com/coachbrittbiz/30min"
