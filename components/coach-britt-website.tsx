@@ -13,6 +13,7 @@ export default function CoachBrittWebsite() {
             <a href="#about" className="transition hover:text-[#b88a2a]">About</a>
             <a href="#services" className="transition hover:text-[#b88a2a]">Services</a>
             <a href="#contact" className="transition hover:text-[#b88a2a]">Contact</a>
+            <a href="/shop" className="transition hover:text-[#b88a2a]">Shop</a>
             <a href="/clients" className="transition hover:text-[#b88a2a]">Client Portal</a>
           </nav>
           <a
