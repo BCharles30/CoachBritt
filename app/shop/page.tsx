@@ -31,27 +31,42 @@ export default function CoachBrittProductPage() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 py-24 text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#b88a2a]">
-          Coach Britt Digital Product
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-          The Scalable Offer Launch Guide
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-black/70">
-          Build the systems. Master the mindset. Scale your business.
-        </p>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-black/60">
-          Turn your idea into a structured, sellable offer with a clear launch strategy that actually converts.
-        </p>
-        <div className="mt-10">
-          <p className="text-5xl font-semibold">$27</p>
-          <a
-            href={CHECKOUT_URL}
-            className="mt-6 inline-block rounded-full bg-[#181818] px-10 py-4 text-sm font-medium text-white transition hover:opacity-90"
-          >
-            Get Instant Access
-          </a>
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:px-10">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
+          {/* Left: Text */}
+          <div className="flex-1 text-center lg:text-left">
+            <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#b88a2a]">
+              Coach Britt Digital Product
+            </p>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
+              The Scalable Offer Launch Guide
+            </h1>
+            <p className="mt-6 text-lg leading-relaxed text-black/70">
+              Build the systems. Master the mindset. Scale your business.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-black/60">
+              Turn your idea into a structured, sellable offer with a clear launch strategy that actually converts.
+            </p>
+            <div className="mt-10">
+              <p className="text-5xl font-semibold">$27</p>
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block rounded-full bg-[#181818] px-10 py-4 text-sm font-medium text-white transition hover:opacity-90"
+              >
+                Get Instant Access
+              </a>
+            </div>
+          </div>
+          {/* Right: Product Image */}
+          <div className="w-full max-w-lg flex-shrink-0 overflow-hidden rounded-[2rem] shadow-xl lg:w-1/2">
+            <img
+              src="/images/scalable-offer-guide.png"
+              alt="The Scalable Offer Launch Guide product preview"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
