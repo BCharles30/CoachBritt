@@ -1,5 +1,9 @@
+"use client";
+import { useState } from "react";
+
 export default function CoachBrittWebsite() {
   const profileImage = "/images/coach-britt-profile.png";
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#faf8f4] text-[#181818]">
@@ -16,15 +20,38 @@ export default function CoachBrittWebsite() {
             <a href="/shop" className="transition hover:text-[#b88a2a]">The Scalable Offer Guide</a>
             <a href="/clients" className="transition hover:text-[#b88a2a]">Client Portal</a>
           </nav>
-          <a
-            href="https://calendly.com/coachbrittbiz/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-[#b88a2a] px-5 py-2 text-sm font-medium text-[#b88a2a] transition hover:bg-[#b88a2a] hover:text-white"
-          >
-            Book a Call
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://calendly.com/coachbrittbiz/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#b88a2a] px-5 py-2 text-sm font-medium text-[#b88a2a] transition hover:bg-[#b88a2a] hover:text-white"
+            >
+              Book a Call
+            </a>
+            <button
+              className="flex flex-col gap-1.5 p-1 md:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`block h-0.5 w-6 bg-[#181818] transition-all duration-300 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
+              <span className={`block h-0.5 w-6 bg-[#181818] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+              <span className={`block h-0.5 w-6 bg-[#181818] transition-all duration-300 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+            </button>
+          </div>
         </div>
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <nav className="border-t border-black/5 bg-[#faf8f4] px-6 py-4 md:hidden">
+            <div className="flex flex-col gap-4 text-sm">
+              <a href="#about" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">About</a>
+              <a href="#services" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">Services</a>
+              <a href="#contact" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">Contact</a>
+              <a href="/shop" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">The Scalable Offer Guide</a>
+              <a href="/clients" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">Client Portal</a>
+            </div>
+          </nav>
+        )}
       </header>
 
       <main>
