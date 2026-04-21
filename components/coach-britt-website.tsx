@@ -181,12 +181,12 @@ export default function CoachBrittWebsite() {
                 Start the conversation and take the next step toward building a business with stronger systems, a resilient mindset, and room to scale.
               </p>
             </div>
-            <form className="grid gap-4">
-              <input className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Your Name" />
-              <input className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Email Address" />
-              <input className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Business Stage" />
-              <textarea className="min-h-[140px] rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Tell me about your goals" />
-              <button className="rounded-full bg-[#181818] px-7 py-3 text-sm font-medium text-white transition hover:opacity-90">
+            <form action="mailto:thecoachbrittmethod@gmail.com" method="POST" encType="text/plain" className="grid gap-4">
+              <input name="Name" className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Your Name" />
+              <input name="Email" type="email" className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Email Address" />
+              <input name="Business Stage" className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Business Stage" />
+              <textarea name="Message" className="min-h-[140px] rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Tell me about your goals" />
+              <button type="submit" className="rounded-full bg-[#181818] px-7 py-3 text-sm font-medium text-white transition hover:opacity-90">
                 Submit Inquiry
               </button>
             </form>
@@ -201,6 +201,7 @@ export default function CoachBrittWebsite() {
             <span className="text-lg font-semibold italic text-[#181818]">Britt</span>
           </div>
           <p>Build the Systems. Master the Mindset. Scale the Business.</p>
+          <a href="mailto:thecoachbrittmethod@gmail.com" className="transition hover:text-[#b88a2a]">thecoachbrittmethod@gmail.com</a>
         </div>
       </footer>
     </div>
