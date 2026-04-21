@@ -1,5 +1,4 @@
 import Link from "next/link"
-import ReviewSection from "@/components/review-section"
 
 export default function ClientBookingPage() {
   return (
@@ -129,7 +128,6 @@ export default function ClientBookingPage() {
           </p>
         </div>
 
-        <ReviewSection />
       </main>
 
       <footer className="border-t border-black/5 bg-white">
