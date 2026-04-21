@@ -1,4 +1,5 @@
 import Link from "next/link"
+import MeetingNotesRequest from "@/components/meeting-notes-request"
 
 export default function ClientBookingPage() {
   return (
@@ -128,6 +129,7 @@ export default function ClientBookingPage() {
           </p>
         </div>
 
+        <MeetingNotesRequest />
       </main>
 
       <footer className="border-t border-black/5 bg-white">
