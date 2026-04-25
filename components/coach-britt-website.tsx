@@ -6,230 +6,308 @@ export default function CoachBrittWebsite() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#faf8f4] text-[#181818]">
-      <header className="sticky top-0 z-50 border-b border-black/5 bg-[#faf8f4]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-          <div>
-            <div className="text-sm uppercase tracking-[0.35em] text-[#b88a2a]">Coach</div>
-            <div className="text-3xl font-semibold italic tracking-wide">Britt</div>
-          </div>
-          <nav className="hidden gap-8 text-sm md:flex">
-            <a href="#about" className="transition hover:text-[#b88a2a]">About</a>
-            <a href="#services" className="transition hover:text-[#b88a2a]">Services</a>
-            <a href="#contact" className="transition hover:text-[#b88a2a]">Contact</a>
-            <a href="/shop" className="transition hover:text-[#b88a2a]">The Scalable Offer Guide</a>
-            <a href="/clients" className="transition hover:text-[#b88a2a]">Client Portal</a>
+    <div className="min-h-screen bg-[#fffaf5] text-[#2d1f1a]" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
+
+      {/* Announcement Bar */}
+      <div className="bg-[#2d1f1a] py-2.5 text-center text-sm tracking-wide text-[#f7efe7]">
+        Digital product available now — build your business foundation before you scale.
+      </div>
+
+      {/* Header */}
+      <header className="sticky top-0 z-50 border-b-2 border-[#d8b89f] bg-white shadow-sm">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+          <a href="#top" className="text-xl font-bold tracking-wide text-[#5a3f35]">Coach Britt</a>
+          <nav className="hidden items-center gap-6 text-sm font-semibold md:flex" style={{ fontFamily: "Arial, sans-serif" }}>
+            <a href="/shop" className="text-[#2d1f1a] transition hover:text-[#c98f7a]">Digital Product</a>
+            <a href="#pathway" className="text-[#2d1f1a] transition hover:text-[#c98f7a]">How It Works</a>
+            <a href="#coaching" className="text-[#2d1f1a] transition hover:text-[#c98f7a]">Coaching</a>
+            <a href="/clients" className="text-[#2d1f1a] transition hover:text-[#c98f7a]">Client Portal</a>
+            <a href="/shop" className="rounded-full bg-[#2d1f1a] px-5 py-2.5 text-[#f7efe7] transition hover:bg-[#5a3f35]">Get the Guide</a>
           </nav>
-          <div className="flex items-center gap-3">
-            <a
-              href="https://calendly.com/coachbrittbiz/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-[#b88a2a] px-5 py-2 text-sm font-medium text-[#b88a2a] transition hover:bg-[#b88a2a] hover:text-white"
-            >
-              Book a Call
-            </a>
-            <button
-              className="flex flex-col gap-1.5 p-1 md:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
-            >
-              <span className={`block h-0.5 w-6 bg-[#181818] transition-all duration-300 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-              <span className={`block h-0.5 w-6 bg-[#181818] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-              <span className={`block h-0.5 w-6 bg-[#181818] transition-all duration-300 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
-            </button>
-          </div>
+          <button
+            className="flex flex-col gap-1.5 p-1 md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block h-0.5 w-6 bg-[#2d1f1a] transition-all duration-300 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-[#2d1f1a] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-[#2d1f1a] transition-all duration-300 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          </button>
         </div>
-        {/* Mobile Menu */}
         {menuOpen && (
-          <nav className="border-t border-black/5 bg-[#faf8f4] px-6 py-4 md:hidden">
-            <div className="flex flex-col gap-4 text-sm">
-              <a href="#about" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">About</a>
-              <a href="#services" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">Services</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">Contact</a>
-              <a href="/shop" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">The Scalable Offer Guide</a>
-              <a href="/clients" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#b88a2a]">Client Portal</a>
+          <nav className="border-t border-[#d8b89f] bg-white px-6 py-4 md:hidden" style={{ fontFamily: "Arial, sans-serif" }}>
+            <div className="flex flex-col gap-4 text-sm font-semibold">
+              <a href="/shop" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#c98f7a]">Digital Product</a>
+              <a href="#pathway" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#c98f7a]">How It Works</a>
+              <a href="#coaching" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#c98f7a]">Coaching</a>
+              <a href="/clients" onClick={() => setMenuOpen(false)} className="py-2 transition hover:text-[#c98f7a]">Client Portal</a>
+              <a href="/shop" onClick={() => setMenuOpen(false)} className="mt-2 inline-block rounded-full bg-[#2d1f1a] px-5 py-2.5 text-center text-[#f7efe7]">Get the Guide</a>
             </div>
           </nav>
         )}
       </header>
 
-      <main>
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(184,138,42,0.16),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(184,138,42,0.12),transparent_28%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:py-24">
-            <div className="flex flex-col justify-center">
-              <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-[#b88a2a]">
-                Business Coaching for Women
-              </p>
-              <h1 className="max-w-xl text-5xl font-semibold leading-tight md:text-6xl">
-                Build the Systems. Master the Mindset. Scale the Business.
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-black/70">
-                Coach Britt helps women move from overwhelmed and inconsistent to structured,
-                confident, and ready to grow with clear systems, intentional strategy, and a mindset built for success.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="https://calendly.com/coachbrittbiz/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#181818] px-7 py-3 text-sm font-medium text-white transition hover:opacity-90"
-                >
-                  Work With Me
-                </a>
-                <a
-                  href="#services"
-                  className="rounded-full border border-[#181818]/15 px-7 py-3 text-sm font-medium transition hover:border-[#b88a2a] hover:text-[#b88a2a]"
-                >
-                  Explore Services
-                </a>
-                <a
-                  href="/clients"
-                  className="rounded-full border border-[#b88a2a] px-7 py-3 text-sm font-medium text-[#b88a2a] transition hover:bg-[#b88a2a] hover:text-white"
-                >
-                  Existing Clients
-                </a>
-              </div>
-            </div>
+      <main id="top">
 
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute -left-4 -top-4 h-28 w-28 rounded-full bg-[#b88a2a]/10 blur-2xl" />
-                <div className="absolute -bottom-8 -right-4 h-36 w-36 rounded-full bg-[#b88a2a]/10 blur-2xl" />
-                <div className="relative overflow-hidden rounded-[2rem] border border-[#b88a2a]/20 bg-white p-3 shadow-[0_20px_70px_rgba(0,0,0,0.08)]">
-                  <img src={profileImage} alt="Coach Britt at work" className="h-[520px] w-full rounded-[1.5rem] object-cover object-center" />
-                </div>
-              </div>
+        {/* Hero */}
+        <section className="mx-auto max-w-6xl grid items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
+          <div>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>
+              Build the systems. Master the mindset. Scale the business.
+            </p>
+            <h1 className="mb-6 text-5xl font-bold leading-none text-[#2d1f1a] md:text-6xl" style={{ lineHeight: "0.96" }}>
+              Your business needs more than motivation. It needs a system.
+            </h1>
+            <p className="mb-7 max-w-xl text-lg leading-relaxed text-[#5a3f35]">
+              Coach Britt helps women entrepreneurs organize their ideas, strengthen their mindset, and build simple business systems that make growth feel clear, focused, and doable.
+            </p>
+            <div className="mb-6 flex flex-wrap gap-3">
+              <a href="/shop" className="rounded-full bg-[#2d1f1a] px-6 py-3.5 text-sm font-bold text-[#f7efe7] shadow-lg transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                Start with the Digital Product
+              </a>
+              <a href="#coaching" className="rounded-full border-2 border-[#2d1f1a] px-6 py-3.5 text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
+                Work with Coach Britt
+              </a>
             </div>
-          </div>
-        </section>
-
-        <section id="about" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-[#b88a2a]">About Coach Britt</p>
-              <h2 className="mt-4 text-4xl font-semibold">Support for women who are ready to build with intention.</h2>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-black/70">
-                Whether you are just starting out or trying to grow what you have already built, you do not need more chaos.
-                You need structure, clarity, and confidence. Coach Britt combines practical business systems with mindset coaching
-                to help women create businesses that feel aligned, sustainable, and scalable.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
-                <div className="text-3xl">01</div>
-                <h3 className="mt-4 text-xl font-semibold">Build Systems</h3>
-                <p className="mt-3 text-sm leading-7 text-black/65">
-                  Create workflows, routines, and structure that support real business growth.
-                </p>
-              </div>
-              <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
-                <div className="text-3xl">02</div>
-                <h3 className="mt-4 text-xl font-semibold">Master Mindset</h3>
-                <p className="mt-3 text-sm leading-7 text-black/65">
-                  Shift from self-doubt and inconsistency into confidence and purposeful action.
-                </p>
-              </div>
-              <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5 sm:col-span-2">
-                <div className="text-3xl">03</div>
-                <h3 className="mt-4 text-xl font-semibold">Scale the Business</h3>
-                <p className="mt-3 text-sm leading-7 text-black/65">
-                  Move toward growth with a strong foundation, better decisions, and a plan that fits your vision.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="services" className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="max-w-2xl">
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-[#b88a2a]">Ways to Work Together</p>
-              <h2 className="mt-4 text-4xl font-semibold">Coaching designed to help you move forward with clarity.</h2>
-            </div>
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
-              <div className="rounded-[2rem] border border-black/5 p-8 shadow-sm">
-                <h3 className="text-2xl font-semibold">1:1 Coaching</h3>
-                <p className="mt-4 text-sm leading-7 text-black/65">
-                  Personalized support for women who want strategy, accountability, and a clear path to growth.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-black/75">
-                  <li>• Business clarity and goal mapping</li>
-                  <li>• Systems and workflow development</li>
-                  <li>• Mindset and confidence coaching</li>
-                </ul>
-              </div>
-              <div className="rounded-[2rem] border border-[#b88a2a]/20 bg-[#faf8f4] p-8 shadow-sm">
-                <div className="inline-flex rounded-full bg-[#b88a2a] px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white">
-                  Signature Offer
-                </div>
-                <h3 className="mt-5 text-2xl font-semibold">The Coach Britt Method</h3>
-                <p className="mt-4 text-sm leading-7 text-black/65">
-                  A transformational framework to help you organize your business, strengthen your mindset, and build for scale.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-black/75">
-                  <li>• Systems audit and action plan</li>
-                  <li>• Mindset reset and growth routines</li>
-                  <li>• Scalable strategy implementation</li>
-                </ul>
-              </div>
-              <div className="rounded-[2rem] border border-black/5 p-8 shadow-sm">
-                <h3 className="text-2xl font-semibold">Power Sessions</h3>
-                <p className="mt-4 text-sm leading-7 text-black/65">
-                  Intensive strategy sessions for women who need clarity fast and want practical next steps.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-black/75">
-                  <li>• Focused problem solving</li>
-                  <li>• Growth planning</li>
-                  <li>• Immediate action roadmap</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="text-sm font-medium uppercase tracking-[0.28em] text-[#b88a2a]">Who This Is For</p>
-            <h2 className="mt-4 text-4xl font-semibold">For the woman who is called to more and ready to build with excellence.</h2>
-            <p className="mt-6 text-lg leading-8 text-black/70">
-              You have the vision. Now it is time to create the structure, discipline, and belief to carry it forward.
+            <p className="text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+              Perfect for new business owners, service providers, and women ready to stop guessing and start building.
             </p>
           </div>
+          <div className="overflow-hidden rounded-[2rem] shadow-2xl border border-[#d8b89f]/30">
+            <img src={profileImage} alt="Coach Britt standing confidently" className="h-full w-full object-cover object-top" style={{ minHeight: "520px" }} />
+          </div>
         </section>
 
-        <section id="contact" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-          <div className="grid gap-8 rounded-[2rem] bg-[#faf8f4] p-8 ring-1 ring-black/5 lg:grid-cols-[1fr_1fr] lg:p-12">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-[#b88a2a]">Contact</p>
-              <h2 className="mt-4 text-4xl font-semibold">Ready to work with Coach Britt?</h2>
-              <p className="mt-6 max-w-lg text-lg leading-8 text-black/70">
-                Start the conversation and take the next step toward building a business with stronger systems, a resilient mindset, and room to scale.
+        {/* About */}
+        <section id="about" className="py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="grid items-center gap-10 lg:grid-cols-2 mb-16">
+              <div className="overflow-hidden rounded-[2rem] border border-[#d8b89f]/30 shadow-xl bg-[#f7efe7]" style={{ minHeight: "480px" }}>
+                <img src={profileImage} alt="Coach Britt working in her office" className="h-full w-full object-cover object-top" style={{ minHeight: "480px" }} />
+              </div>
+              <div>
+                <h2 className="text-4xl font-bold leading-tight text-[#2d1f1a] md:text-5xl">
+                  Designed for the woman who knows she is called to build more.
+                </h2>
+                <p className="mt-5 text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  This site leads with your digital product as the affordable first step, then naturally guides serious clients into your coaching offers.
+                </p>
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                { title: "Clarity", desc: "Help clients understand what they sell, who they serve, and what makes their business valuable." },
+                { title: "Systems", desc: "Introduce simple structures for content, client flow, offers, payments, and follow-up." },
+                { title: "Mindset", desc: "Support confidence, consistency, discipline, and the belief needed to keep showing up." },
+              ].map((item) => (
+                <div key={item.title} className="rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm">
+                  <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pathway */}
+        <section id="pathway" className="bg-[#fffaf5] py-20">
+          <div className="mx-auto max-w-6xl px-6 text-center lg:px-8">
+            <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">A simple path from digital product to coaching client.</h2>
+            <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+              The redesign makes your site feel intentional: learn first, build trust, then invite them into your signature coaching offer.
+            </p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                { step: "1", title: "Buy the guide", desc: "They purchase the digital product and get an immediate win with business clarity." },
+                { step: "2", title: "Apply the system", desc: "They start organizing their business, but may realize they want accountability and direction." },
+                { step: "3", title: "Work with Coach Britt", desc: "They move into coaching when they are ready for personalized strategy and support." },
+              ].map((item) => (
+                <div key={item.step} className="rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm text-left">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#2d1f1a] text-sm font-bold text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>{item.step}</div>
+                  <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Coaching Pricing */}
+        <section id="coaching" className="py-20" style={{ background: "linear-gradient(180deg, #f7efe7, #fffaf5)" }}>
+          <div className="mx-auto max-w-6xl px-6 text-center lg:px-8">
+            <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Ready for more support?</h2>
+            <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+              Your coaching offers feel like the premium transformation after the digital product.
+            </p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {/* Foundation */}
+              <div className="flex flex-col justify-between rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm" style={{ minHeight: "480px" }}>
+                <div>
+                  <h3 className="mb-2 text-2xl font-bold text-[#5a3f35]">Foundation</h3>
+                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman who needs structure, clarity, and monthly direction.</p>
+                  <div className="mb-1 text-4xl font-bold text-[#2d1f1a]">$197<span className="text-lg">/mo</span></div>
+                  <p className="mb-5 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>12-month coaching commitment</p>
+                  <ul className="space-y-2 text-left text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <li>• Monthly strategy call</li>
+                    <li>• Business systems roadmap</li>
+                    <li>• Mindset and goal check-in</li>
+                    <li>• Email support</li>
+                  </ul>
+                </div>
+                <a href="#application" className="mt-8 block rounded-full border-2 border-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Work with Coach Britt
+                </a>
+              </div>
+              {/* Growth - Popular */}
+              <div className="relative flex flex-col justify-between rounded-[1.75rem] border-2 border-[#b88746] bg-white p-8 shadow-lg md:scale-[1.03]" style={{ minHeight: "480px" }}>
+                <div className="absolute -top-4 left-7 rounded-full bg-[#b88746] px-4 py-1.5 text-xs font-bold text-white" style={{ fontFamily: "Arial, sans-serif" }}>Best Next Step</div>
+                <div>
+                  <h3 className="mb-2 text-2xl font-bold text-[#5a3f35]">Growth</h3>
+                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the client who wants deeper accountability and consistent implementation.</p>
+                  <div className="mb-1 text-4xl font-bold text-[#2d1f1a]">$297<span className="text-lg">/mo</span></div>
+                  <p className="mb-5 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>12-month coaching commitment</p>
+                  <ul className="space-y-2 text-left text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <li>• Two strategy calls per month</li>
+                    <li>• Offer and pricing refinement</li>
+                    <li>• Content and visibility planning</li>
+                    <li>• Systems setup support</li>
+                    <li>• Priority email support</li>
+                  </ul>
+                </div>
+                <a href="#application" className="mt-8 block rounded-full bg-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Apply for Coaching
+                </a>
+              </div>
+              {/* Scale */}
+              <div className="flex flex-col justify-between rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm" style={{ minHeight: "480px" }}>
+                <div>
+                  <h3 className="mb-2 text-2xl font-bold text-[#5a3f35]">Scale</h3>
+                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman ready for high-touch guidance, structure, and strategy.</p>
+                  <div className="mb-1 text-4xl font-bold text-[#2d1f1a]">$497<span className="text-lg">/mo</span></div>
+                  <p className="mb-5 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>12-month coaching commitment</p>
+                  <ul className="space-y-2 text-left text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <li>• Weekly coaching support</li>
+                    <li>• Full business systems audit</li>
+                    <li>• Launch and sales planning</li>
+                    <li>• Client journey development</li>
+                    <li>• Voice note or Voxer-style support</li>
+                  </ul>
+                </div>
+                <a href="#application" className="mt-8 block rounded-full border-2 border-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Apply for Coaching
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Application */}
+        <section id="application" className="py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Coaching Application</p>
+              <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Apply to Work with Coach Britt</h2>
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                This application helps determine which coaching tier fits your goals, business stage, and level of support needed.
               </p>
             </div>
-            <form action="mailto:thecoachbrittmethod@gmail.com" method="POST" encType="text/plain" className="grid gap-4">
-              <input name="Name" className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Your Name" />
-              <input name="Email" type="email" className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Email Address" />
-              <input name="Business Stage" className="rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Business Stage" />
-              <textarea name="Message" className="min-h-[140px] rounded-2xl border border-black/10 bg-white px-5 py-4 outline-none transition focus:border-[#b88a2a]" placeholder="Tell me about your goals" />
-              <button type="submit" className="rounded-full bg-[#181818] px-7 py-3 text-sm font-medium text-white transition hover:opacity-90">
-                Submit Inquiry
-              </button>
-            </form>
+            <div className="mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-[#d8b89f]/40 bg-white shadow-sm">
+              <iframe
+                src="https://tally.so/r/A768Vo"
+                width="100%"
+                height="900"
+                frameBorder={0}
+                title="Coaching Application Form"
+              />
+              <div className="border-t border-[#d8b89f]/40 px-8 py-8 text-center">
+                <p className="mb-4 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>Already submitted your application?</p>
+                <a href="https://calendly.com/coachbrittbiz/30min" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#2d1f1a] px-6 py-3 text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Book Your 30-Minute Call
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Next Steps */}
+        <section className="bg-[#fffaf5] py-20">
+          <div className="mx-auto max-w-6xl px-6 text-center lg:px-8">
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Next Steps</p>
+            <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Your application has been received</h2>
+            <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+              {"You're one step closer to building a structured, scalable business. The next step is to book your call so we can map out exactly what you need."}
+            </p>
+            <div className="mx-auto max-w-2xl rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 text-left shadow-sm">
+              <h3 className="mb-3 text-xl font-bold text-[#5a3f35]">What to expect on your call:</h3>
+              <ul className="mb-6 space-y-2 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                <li>• {"We'll review your current business structure"}</li>
+                <li>• {"Identify what's holding you back"}</li>
+                <li>• Create a clear plan for your next level</li>
+              </ul>
+              <h3 className="mb-3 text-xl font-bold text-[#5a3f35]">Come prepared with:</h3>
+              <ul className="mb-6 space-y-2 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                <li>• Your current offer (or idea)</li>
+                <li>• Your biggest challenge right now</li>
+                <li>• Your goals for the next 3-6 months</li>
+              </ul>
+              <p className="mb-6 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                {"This call is for women who are serious about building a real business—not just thinking about it."}
+              </p>
+              <div className="text-center">
+                <a href="https://calendly.com/coachbrittbiz/30min" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#2d1f1a] px-6 py-3 text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Book Your Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-[#5a3f35] py-20">
+          <div className="mx-auto max-w-6xl grid items-center gap-10 px-6 lg:grid-cols-[1fr_0.75fr] lg:px-8">
+            <div>
+              <h2 className="mb-5 text-4xl font-bold leading-none text-[#f7efe7] md:text-5xl">Start with clarity. Grow with strategy.</h2>
+              <p className="mb-8 max-w-xl text-lg leading-relaxed text-[#f7efe7]/80" style={{ fontFamily: "Arial, sans-serif" }}>
+                Your digital product gives clients a low-pressure way to experience your coaching style, while your coaching offers create the long-term transformation.
+              </p>
+              <a href="/shop" className="rounded-full bg-[#2d1f1a] px-7 py-3.5 text-sm font-bold text-[#f7efe7] transition hover:opacity-90" style={{ fontFamily: "Arial, sans-serif" }}>
+                Get the Digital Product
+              </a>
+            </div>
+            <div className="overflow-hidden rounded-[2rem] shadow-2xl" style={{ maxHeight: "420px" }}>
+              <img src={profileImage} alt="Coach Britt brand photo" className="h-full w-full object-cover object-top" style={{ height: "420px" }} />
+            </div>
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="grid gap-8 rounded-[2rem] bg-[#f7efe7] p-8 ring-1 ring-[#d8b89f]/40 lg:grid-cols-2 lg:p-12">
+              <div>
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Contact</p>
+                <h2 className="mb-5 text-4xl font-bold text-[#2d1f1a]">Ready to work with Coach Britt?</h2>
+                <p className="text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Start the conversation and take the next step toward building a business with stronger systems, a resilient mindset, and room to scale.
+                </p>
+              </div>
+              <form action="mailto:thecoachbrittmethod@gmail.com" method="POST" encType="text/plain" className="grid gap-4">
+                <input name="Name" className="rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Your Name" style={{ fontFamily: "Arial, sans-serif" }} />
+                <input name="Email" type="email" className="rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Email Address" style={{ fontFamily: "Arial, sans-serif" }} />
+                <input name="Business Stage" className="rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Business Stage" style={{ fontFamily: "Arial, sans-serif" }} />
+                <textarea name="Message" className="min-h-[140px] rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Tell me about your goals" style={{ fontFamily: "Arial, sans-serif" }} />
+                <button type="submit" className="rounded-full bg-[#2d1f1a] px-7 py-3 text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Submit Inquiry
+                </button>
+              </form>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-black/5 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-black/60 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <div>
-            <span className="uppercase tracking-[0.28em] text-[#b88a2a]">Coach</span>{" "}
-            <span className="text-lg font-semibold italic text-[#181818]">Britt</span>
-          </div>
-          <p>Build the Systems. Master the Mindset. Scale the Business.</p>
-          <a href="mailto:thecoachbrittmethod@gmail.com" className="transition hover:text-[#b88a2a]">thecoachbrittmethod@gmail.com</a>
-        </div>
+      <footer className="bg-[#2d1f1a] px-6 py-8 text-center text-sm text-[#d8b89f]" style={{ fontFamily: "Arial, sans-serif" }}>
+        <p>© 2026 Coach Britt. Build the systems. Master the mindset. Scale the business.</p>
+        <a href="mailto:thecoachbrittmethod@gmail.com" className="mt-2 block transition hover:text-[#b88746]">thecoachbrittmethod@gmail.com</a>
       </footer>
     </div>
   );
