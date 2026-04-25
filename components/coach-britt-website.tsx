@@ -108,15 +108,26 @@ export default function CoachBrittWebsite() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="grid items-center gap-10 lg:grid-cols-2 mb-16">
               <div className="overflow-hidden rounded-[2rem] border border-[#d8b89f]/30 shadow-xl bg-[#f7efe7]" style={{ minHeight: "480px" }}>
-                <img src={profileImage} alt="Coach Britt working in her office" className="h-full w-full object-cover object-top" style={{ minHeight: "480px" }} />
+                <img src="/images/coach-britt-coaching.png" alt="Coach Britt coaching women in business" className="h-full w-full object-cover object-top" style={{ minHeight: "480px" }} />
               </div>
               <div>
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>For women who are ready</p>
                 <h2 className="text-4xl font-bold leading-tight text-[#2d1f1a] md:text-5xl">
                   Designed for the woman who knows she is called to build more.
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                  This site leads with your digital product as the affordable first step, then naturally guides serious clients into your coaching offers.
+                  You have the vision. You have put in the work. But somewhere between the idea and the income, things got complicated. Coach Britt works with women who are done staying stuck and ready to build a business that actually runs — with clarity, strategy, and the right support behind them.
                 </p>
+                <p className="mt-4 text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  This is not generic advice. It is a personalized coaching experience designed to meet you exactly where you are and move you forward — consistently, confidently, and on purpose.
+                </p>
+                <button
+                  onClick={openApplication}
+                  className="mt-8 rounded-full bg-[#2d1f1a] px-7 py-3.5 text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]"
+                  style={{ fontFamily: "Arial, sans-serif" }}
+                >
+                  Apply for Coaching
+                </button>
               </div>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
