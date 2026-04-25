@@ -29,7 +29,7 @@ export default function ClientPortalPage() {
             Private access for current coaching clients. Book your next session, check in weekly, or request your session notes below.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="#booking" className="rounded-full bg-[#b88746] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
+            <a href="#packages" className="rounded-full bg-[#b88746] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
               Book a Session
             </a>
             <a
@@ -120,57 +120,7 @@ export default function ClientPortalPage() {
           </div>
         </div>
 
-        {/* Session Booking */}
-        <div id="booking">
-          <h2 className="mb-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif", borderBottom: "1px solid rgba(255,250,245,0.15)", paddingBottom: "8px" }}>Book Your Session</h2>
-          <p className="mb-6 text-sm text-[#d8b89f]">Choose the session type that matches your current coaching package.</p>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {/* 1:1 60min */}
-            <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.06)" }}>
-              <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>1:1 Coaching</h3>
-              <p className="mb-1 text-sm text-[#d8b89f]">60-minute session</p>
-              <ul className="mb-6 mt-3 space-y-2 text-sm text-[#d8b89f]">
-                <li>• Personalized strategy</li>
-                <li>• Accountability check-in</li>
-                <li>• Mindset coaching</li>
-              </ul>
-              <a href="https://calendly.com/coachbrittbiz/60min" target="_blank" rel="noopener noreferrer" className="mt-auto block rounded-full bg-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-white transition hover:opacity-90">
-                Book 60 Min
-              </a>
-            </div>
-
-            {/* Coach Britt Method */}
-            <div className="flex flex-col rounded-[1.75rem] border border-[#b88746]/60 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(184,135,70,0.12)" }}>
-              <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>The Coach Britt Method</h3>
-              <p className="mb-1 text-sm text-[#d8b89f]">2-hour deep dive session</p>
-              <ul className="mb-6 mt-3 space-y-2 text-sm text-[#d8b89f]">
-                <li>• Comprehensive strategy</li>
-                <li>• Business systems review</li>
-                <li>• Full transformation plan</li>
-              </ul>
-              <a href="https://calendly.com/coachbrittbiz/new-meeting" target="_blank" rel="noopener noreferrer" className="mt-auto block rounded-full bg-[#2d1f1a] px-5 py-2.5 text-center text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]">
-                Book 2 Hours
-              </a>
-            </div>
-
-            {/* Power Session */}
-            <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.06)" }}>
-              <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Power Session</h3>
-              <p className="mb-1 text-sm text-[#d8b89f]">30-minute focused session</p>
-              <ul className="mb-6 mt-3 space-y-2 text-sm text-[#d8b89f]">
-                <li>• Quick wins</li>
-                <li>• Targeted problem-solving</li>
-                <li>• Immediate action steps</li>
-              </ul>
-              <a href="https://calendly.com/coachbrittbiz/15min" target="_blank" rel="noopener noreferrer" className="mt-auto block rounded-full bg-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-white transition hover:opacity-90">
-                Book 30 Min
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Legacy Clients Only — Tier Business Review */}
+        {/* Legacy Clients Only — Tier Business Review + Book Your Session */}
         <div className="rounded-[2rem] border border-[#b88746]/40 p-8" style={{ background: "rgba(184,135,70,0.08)" }}>
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <div>
@@ -207,6 +157,57 @@ export default function ClientPortalPage() {
             >
               Book Your Tier Review
             </a>
+          </div>
+
+          {/* Book Your Session — Legacy Only */}
+          <div className="mt-10 border-t border-white/10 pt-8" id="booking">
+            <h3 className="mb-1 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Book Your Session</h3>
+            <p className="mb-6 text-sm text-[#d8b89f]">Choose the session type that matches your coaching arrangement.</p>
+            <div className="grid gap-5 md:grid-cols-3">
+
+              {/* 1:1 60min */}
+              <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-6 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.05)" }}>
+                <h4 className="mb-1 text-lg font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>1:1 Coaching</h4>
+                <p className="mb-4 text-sm text-[#d8b89f]">60-minute session</p>
+                <ul className="mb-6 space-y-1.5 text-sm text-[#d8b89f]">
+                  <li>• Personalized strategy</li>
+                  <li>• Accountability check-in</li>
+                  <li>• Mindset coaching</li>
+                </ul>
+                <a href="https://calendly.com/coachbrittbiz/60min" target="_blank" rel="noopener noreferrer" className="mt-auto block rounded-full bg-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-white transition hover:opacity-90">
+                  Book 60 Min
+                </a>
+              </div>
+
+              {/* Coach Britt Method */}
+              <div className="flex flex-col rounded-[1.75rem] border border-[#b88746]/50 p-6 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(184,135,70,0.1)" }}>
+                <h4 className="mb-1 text-lg font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>The Coach Britt Method</h4>
+                <p className="mb-4 text-sm text-[#d8b89f]">2-hour deep dive</p>
+                <ul className="mb-6 space-y-1.5 text-sm text-[#d8b89f]">
+                  <li>• Comprehensive strategy</li>
+                  <li>• Business systems review</li>
+                  <li>• Full transformation plan</li>
+                </ul>
+                <a href="https://calendly.com/coachbrittbiz/new-meeting" target="_blank" rel="noopener noreferrer" className="mt-auto block rounded-full border border-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-[#b88746] transition hover:bg-[#b88746] hover:text-[#1a0f0a]">
+                  Book 2 Hours
+                </a>
+              </div>
+
+              {/* Power Session */}
+              <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-6 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.05)" }}>
+                <h4 className="mb-1 text-lg font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Power Session</h4>
+                <p className="mb-4 text-sm text-[#d8b89f]">30-minute focused session</p>
+                <ul className="mb-6 space-y-1.5 text-sm text-[#d8b89f]">
+                  <li>• Quick wins</li>
+                  <li>• Targeted problem-solving</li>
+                  <li>• Immediate action steps</li>
+                </ul>
+                <a href="https://calendly.com/coachbrittbiz/15min" target="_blank" rel="noopener noreferrer" className="mt-auto block rounded-full bg-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-white transition hover:opacity-90">
+                  Book 30 Min
+                </a>
+              </div>
+
+            </div>
           </div>
         </div>
 
