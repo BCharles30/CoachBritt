@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import ContactForm from "@/components/contact-form";
 
 export default function CoachBrittWebsite() {
   const profileImage = "/images/coach-britt-profile.png";
@@ -361,15 +362,7 @@ export default function CoachBrittWebsite() {
                   Start the conversation and take the next step. I would love to help you build a business with stronger systems, a resilient mindset, and real room to scale.
                 </p>
               </div>
-              <form action="mailto:thecoachbrittmethod@gmail.com" method="POST" encType="text/plain" className="grid gap-4">
-                <input name="Name" className="rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Your Name" style={{ fontFamily: "Arial, sans-serif" }} />
-                <input name="Email" type="email" className="rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Email Address" style={{ fontFamily: "Arial, sans-serif" }} />
-                <input name="Business Stage" className="rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Business Stage" style={{ fontFamily: "Arial, sans-serif" }} />
-                <textarea name="Message" className="min-h-[140px] rounded-2xl border border-[#d8b89f]/50 bg-[#fffaf5] px-5 py-4 text-[#2d1f1a] outline-none transition focus:border-[#b88746] focus:ring-2 focus:ring-[#b88746]/20" placeholder="Tell me about your goals" style={{ fontFamily: "Arial, sans-serif" }} />
-                <button type="submit" className="rounded-full bg-[#2d1f1a] px-7 py-3 text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                  Submit Inquiry
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </section>
