@@ -32,7 +32,7 @@ export default function CoachBrittWebsite() {
 
       {/* Announcement Bar */}
       <div className="bg-[#2d1f1a] py-2.5 text-center text-sm tracking-wide text-[#f7efe7]">
-        Digital product available now — build your business foundation before you scale.
+              My new digital product is available now — build your business foundation before you scale.
       </div>
 
       {/* Header */}
@@ -81,7 +81,7 @@ export default function CoachBrittWebsite() {
               Your business needs more than motivation. It needs a system.
             </h1>
             <p className="mb-7 max-w-xl text-lg leading-relaxed text-[#5a3f35]">
-              Coach Britt helps women entrepreneurs organize their ideas, strengthen their mindset, and build simple business systems that make growth feel clear, focused, and doable.
+              I help women entrepreneurs organize their ideas, strengthen their mindset, and build simple business systems that make growth feel clear, focused, and doable.
             </p>
             <div className="mb-6 flex flex-wrap gap-3">
               <a href="/shop" className="rounded-full bg-[#2d1f1a] px-6 py-3.5 text-sm font-bold text-[#f7efe7] shadow-lg transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
@@ -116,10 +116,10 @@ export default function CoachBrittWebsite() {
                   Designed for the woman who knows she is called to build more.
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                  You have the vision. You have put in the work. But somewhere between the idea and the income, things got complicated. Coach Britt works with women who are done staying stuck and ready to build a business that actually runs — with clarity, strategy, and the right support behind them.
+                  You have the vision. You have put in the work. But somewhere between the idea and the income, things got complicated. I work with women who are done staying stuck and ready to build a business that actually runs — with clarity, strategy, and the right support behind them.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                  This is not generic advice. It is a personalized coaching experience designed to meet you exactly where you are and move you forward — consistently, confidently, and on purpose.
+                  I do not offer generic advice. I offer a personalized coaching experience designed to meet you exactly where you are and move you forward — consistently, confidently, and on purpose.
                 </p>
                 <button
                   onClick={openApplication}
@@ -132,9 +132,9 @@ export default function CoachBrittWebsite() {
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               {[
-                { title: "Clarity", desc: "Help clients understand what they sell, who they serve, and what makes their business valuable." },
-                { title: "Systems", desc: "Introduce simple structures for content, client flow, offers, payments, and follow-up." },
-                { title: "Mindset", desc: "Support confidence, consistency, discipline, and the belief needed to keep showing up." },
+                { title: "Clarity", desc: "I help you understand what you sell, who you serve, and what makes your business valuable." },
+                { title: "Systems", desc: "I introduce simple structures for content, client flow, offers, payments, and follow-up." },
+                { title: "Mindset", desc: "I support your confidence, consistency, discipline, and the belief you need to keep showing up." },
               ].map((item) => (
                 <div key={item.title} className="rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm">
                   <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">{item.title}</h3>
@@ -152,7 +152,7 @@ export default function CoachBrittWebsite() {
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Next Steps</p>
               <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">You bought the guide, now what?</h2>
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                The guide gives you the blueprint. But if you are ready for real accountability, a personalized plan, and someone in your corner — here is how to take the next step with Coach Britt.
+                The guide gives you the blueprint. But if you are ready for real accountability, a personalized plan, and someone in your corner — here is how to take the next step with me.
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
@@ -174,7 +174,7 @@ export default function CoachBrittWebsite() {
                 <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#b88746] text-sm font-bold text-white" style={{ fontFamily: "Arial, sans-serif" }}>3</div>
                 <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">Apply for coaching support</h3>
                 <p className="mb-5 text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
-                  If you are ready for a personalized strategy, monthly accountability, and hands-on business coaching — choose a tier and apply to work with Coach Britt.
+                  If you are ready for a personalized strategy, monthly accountability, and hands-on business coaching — choose a tier and apply to work with me directly.
                 </p>
                 <button
                   onClick={openApplication}
@@ -193,14 +193,14 @@ export default function CoachBrittWebsite() {
           <div className="mx-auto max-w-6xl px-6 text-center lg:px-8">
             <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Ready for more support?</h2>
             <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-              Your coaching offers feel like the premium transformation after the digital product.
+              My coaching offers are the premium transformation after the digital product. When you are ready for more, I am here.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
               {/* Foundation */}
               <div className="flex flex-col justify-between rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm" style={{ minHeight: "480px" }}>
                 <div>
                   <h3 className="mb-2 text-2xl font-bold text-[#5a3f35]">Foundation</h3>
-                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman who needs structure, clarity, and monthly direction.</p>
+                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman who needs structure, clarity, and monthly direction from me.</p>
                   <div className="mb-1 text-4xl font-bold text-[#2d1f1a]">$197<span className="text-lg">/mo</span></div>
                   <p className="mb-5 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>12-month coaching commitment</p>
                   <ul className="space-y-2 text-left text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
@@ -219,7 +219,7 @@ export default function CoachBrittWebsite() {
                 <div className="absolute -top-4 left-7 rounded-full bg-[#b88746] px-4 py-1.5 text-xs font-bold text-white" style={{ fontFamily: "Arial, sans-serif" }}>Best Next Step</div>
                 <div>
                   <h3 className="mb-2 text-2xl font-bold text-[#5a3f35]">Growth</h3>
-                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the client who wants deeper accountability and consistent implementation.</p>
+                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman who wants deeper accountability and consistent implementation with my support.</p>
                   <div className="mb-1 text-4xl font-bold text-[#2d1f1a]">$297<span className="text-lg">/mo</span></div>
                   <p className="mb-5 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>12-month coaching commitment</p>
                   <ul className="space-y-2 text-left text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
@@ -238,7 +238,7 @@ export default function CoachBrittWebsite() {
               <div className="flex flex-col justify-between rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm" style={{ minHeight: "480px" }}>
                 <div>
                   <h3 className="mb-2 text-2xl font-bold text-[#5a3f35]">Scale</h3>
-                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman ready for high-touch guidance, structure, and strategy.</p>
+                  <p className="mb-4 text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>For the woman ready for high-touch guidance, structure, and strategy — all delivered by me, personally.</p>
                   <div className="mb-1 text-4xl font-bold text-[#2d1f1a]">$497<span className="text-lg">/mo</span></div>
                   <p className="mb-5 text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>12-month coaching commitment</p>
                   <ul className="space-y-2 text-left text-sm text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
@@ -262,9 +262,9 @@ export default function CoachBrittWebsite() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="mb-10 text-center">
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Coaching Application</p>
-              <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Apply to Work with Coach Britt</h2>
+              <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Apply to Work with Me</h2>
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                This application helps determine which coaching tier fits your goals, business stage, and level of support needed.
+                This application helps me determine which coaching tier fits your goals, business stage, and level of support needed.
               </p>
             </div>
             <div className="mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-[#d8b89f]/40 bg-white shadow-sm">
@@ -356,9 +356,9 @@ export default function CoachBrittWebsite() {
             <div className="grid gap-8 rounded-[2rem] bg-[#f7efe7] p-8 ring-1 ring-[#d8b89f]/40 lg:grid-cols-2 lg:p-12">
               <div>
                 <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Contact</p>
-                <h2 className="mb-5 text-4xl font-bold text-[#2d1f1a]">Ready to work with Coach Britt?</h2>
+                <h2 className="mb-5 text-4xl font-bold text-[#2d1f1a]">Ready to work with me?</h2>
                 <p className="text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-                  Start the conversation and take the next step toward building a business with stronger systems, a resilient mindset, and room to scale.
+                  Start the conversation and take the next step. I would love to help you build a business with stronger systems, a resilient mindset, and real room to scale.
                 </p>
               </div>
               <form action="mailto:thecoachbrittmethod@gmail.com" method="POST" encType="text/plain" className="grid gap-4">
