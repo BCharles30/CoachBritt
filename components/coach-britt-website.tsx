@@ -1,9 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function CoachBrittWebsite() {
   const profileImage = "/images/coach-britt-profile.png";
   const [menuOpen, setMenuOpen] = useState(false);
+  const [applicationSubmitted, setApplicationSubmitted] = useState(false);
+
+  useEffect(() => {
+    const handler = (e: MessageEvent) => {
+      if (e.data?.type === "tally-form-submit-done") {
+        setApplicationSubmitted(true);
+        setTimeout(() => {
+          document.getElementById("next-steps")?.scrollIntoView({ behavior: "smooth" });
+        }, 500);
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#fffaf5] text-[#2d1f1a]" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
@@ -232,8 +246,9 @@ export default function CoachBrittWebsite() {
           </div>
         </section>
 
-        {/* Next Steps */}
-        <section className="bg-[#fffaf5] py-20">
+        {/* Next Steps - only shown after application submitted */}
+        {applicationSubmitted && (
+        <section id="next-steps" className="bg-[#fffaf5] py-20">
           <div className="mx-auto max-w-6xl px-6 text-center lg:px-8">
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Next Steps</p>
             <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">Your application has been received</h2>
@@ -264,6 +279,7 @@ export default function CoachBrittWebsite() {
             </div>
           </div>
         </section>
+        )}
 
         {/* CTA */}
         <section className="bg-[#5a3f35] py-20">
