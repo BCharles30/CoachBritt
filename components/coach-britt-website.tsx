@@ -315,16 +315,26 @@ export default function CoachBrittWebsite() {
         <section className="bg-[#5a3f35] py-20">
           <div className="mx-auto max-w-6xl grid items-center gap-10 px-6 lg:grid-cols-[1fr_0.75fr] lg:px-8">
             <div>
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.13em] text-[#d8b89f]" style={{ fontFamily: "Arial, sans-serif" }}>New Digital Product</p>
               <h2 className="mb-5 text-4xl font-bold leading-none text-[#f7efe7] md:text-5xl">Start with clarity. Grow with strategy.</h2>
               <p className="mb-8 max-w-xl text-lg leading-relaxed text-[#f7efe7]/80" style={{ fontFamily: "Arial, sans-serif" }}>
-                Your digital product gives clients a low-pressure way to experience your coaching style, while your coaching offers create the long-term transformation.
+                You have the idea. You have the drive. What you need is a clear, proven system to turn it into a profitable, scalable offer — without the overwhelm. The Scalable Offer Launch Guide walks you step by step through creating an offer that sells, building your launch plan, and setting up the systems that make your business work for you. For just $27, you get the blueprint that most women spend thousands trying to figure out on their own.
               </p>
-              <a href="/shop" className="rounded-full bg-[#2d1f1a] px-7 py-3.5 text-sm font-bold text-[#f7efe7] transition hover:opacity-90" style={{ fontFamily: "Arial, sans-serif" }}>
-                Get the Digital Product
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a href="/shop" className="rounded-full bg-[#b88746] px-7 py-3.5 text-sm font-bold text-white transition hover:opacity-90" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Get the Guide — $27
+                </a>
+                <a href="#coaching" className="rounded-full border-2 border-[#f7efe7]/40 px-7 py-3.5 text-sm font-bold text-[#f7efe7] transition hover:border-[#f7efe7] hover:bg-[#f7efe7]/10" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Explore Coaching
+                </a>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl" style={{ maxHeight: "420px" }}>
-              <img src={profileImage} alt="Coach Britt brand photo" className="h-full w-full object-cover object-top" style={{ height: "420px" }} />
+            <div className="overflow-hidden rounded-[2rem] shadow-2xl">
+              <img
+                src="/images/scalable-offer-guide.png"
+                alt="The Scalable Offer Launch Guide — $27 digital guide by Coach Britt"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </section>
