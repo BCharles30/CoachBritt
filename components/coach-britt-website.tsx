@@ -68,6 +68,9 @@ export default function CoachBrittWebsite() {
               <a href="#coaching" className="rounded-full border-2 border-[#2d1f1a] px-6 py-3.5 text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
                 Work with Coach Britt
               </a>
+              <a href="/clients" className="rounded-full border-2 border-[#b88746] px-6 py-3.5 text-sm font-bold text-[#b88746] transition hover:bg-[#b88746] hover:text-white" style={{ fontFamily: "Arial, sans-serif" }}>
+                Existing Clients
+              </a>
             </div>
             <p className="text-sm text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
               Perfect for new business owners, service providers, and women ready to stop guessing and start building.
