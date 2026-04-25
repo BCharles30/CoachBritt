@@ -1,7 +1,12 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import MeetingNotesRequest from "@/components/meeting-notes-request"
 
-export default function ClientBookingPage() {
+export default function ClientPortalPage() {
+  const [showNotesForm, setShowNotesForm] = useState(false)
+
   return (
     <div className="min-h-screen text-[#f7efe7]" style={{ background: "#2d1f1a", fontFamily: "Arial, sans-serif" }}>
       <header className="border-b border-white/10 bg-[#2d1f1a]">
@@ -15,37 +20,46 @@ export default function ClientBookingPage() {
         </div>
       </header>
 
-      <main>
+      <main className="mx-auto max-w-5xl px-6 py-12 lg:px-8 space-y-8">
+
         {/* Welcome Banner */}
-        <div className="mx-auto max-w-5xl px-6 py-12 lg:px-8">
-          <div className="rounded-[2rem] border border-white/10 p-8 shadow-2xl" style={{ background: "rgba(255,250,245,0.07)" }}>
-            <h1 className="mb-3 text-3xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Welcome Back</h1>
-            <p className="mb-6 max-w-2xl text-[#d8b89f]">
-              Private access for current coaching clients. Book your next session, request meeting notes, or get support below.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a href="#booking" className="rounded-full bg-[#b88746] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
-                Book a Session
-              </a>
-              <a href="https://calendly.com/coachbrittbiz/15min" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-bold text-[#f7efe7] transition hover:border-[#b88746] hover:text-[#b88746]">
-                Book Legacy Session
-              </a>
-              <a href="https://tally.so/r/LZEXzl" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-bold text-[#f7efe7] transition hover:border-[#b88746] hover:text-[#b88746]">
-                Weekly Check-In
-              </a>
-            </div>
+        <div className="rounded-[2rem] border border-white/10 p-8 shadow-2xl" style={{ background: "rgba(255,250,245,0.07)" }}>
+          <h1 className="mb-3 text-3xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Welcome Back</h1>
+          <p className="mb-6 max-w-2xl text-[#d8b89f]">
+            Private access for current coaching clients. Book your next session, check in weekly, or request your session notes below.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="#booking" className="rounded-full bg-[#b88746] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
+              Book a Session
+            </a>
+            <a
+              href="https://tally.so/r/LZEXzl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-bold text-[#f7efe7] transition hover:border-[#b88746] hover:text-[#b88746]"
+            >
+              Weekly Check-In
+            </a>
+            <button
+              onClick={() => {
+                setShowNotesForm(true)
+                setTimeout(() => document.getElementById("notes-form")?.scrollIntoView({ behavior: "smooth" }), 100)
+              }}
+              className="rounded-full border border-white/30 px-5 py-2.5 text-sm font-bold text-[#f7efe7] transition hover:border-[#b88746] hover:text-[#b88746]"
+            >
+              Request Session Notes
+            </button>
           </div>
         </div>
 
         {/* Session Booking */}
-        <div id="booking" className="mx-auto max-w-5xl px-6 pb-12 lg:px-8">
+        <div id="booking">
           <h2 className="mb-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif", borderBottom: "1px solid rgba(255,250,245,0.15)", paddingBottom: "8px" }}>Book Your Session</h2>
           <p className="mb-6 text-sm text-[#d8b89f]">Choose the session type that matches your current coaching package.</p>
 
           <div className="grid gap-5 md:grid-cols-3">
             {/* 1:1 60min */}
             <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.06)" }}>
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[14px] text-2xl" style={{ background: "rgba(216,184,159,0.18)" }}>📅</div>
               <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>1:1 Coaching</h3>
               <p className="mb-1 text-sm text-[#d8b89f]">60-minute session</p>
               <ul className="mb-6 mt-3 space-y-2 text-sm text-[#d8b89f]">
@@ -60,7 +74,6 @@ export default function ClientBookingPage() {
 
             {/* Coach Britt Method */}
             <div className="flex flex-col rounded-[1.75rem] border border-[#b88746]/60 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(184,135,70,0.12)" }}>
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[14px] text-2xl" style={{ background: "rgba(184,135,70,0.25)" }}>⭐</div>
               <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>The Coach Britt Method</h3>
               <p className="mb-1 text-sm text-[#d8b89f]">2-hour deep dive session</p>
               <ul className="mb-6 mt-3 space-y-2 text-sm text-[#d8b89f]">
@@ -75,7 +88,6 @@ export default function ClientBookingPage() {
 
             {/* Power Session */}
             <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.06)" }}>
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[14px] text-2xl" style={{ background: "rgba(216,184,159,0.18)" }}>⚡</div>
               <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Power Session</h3>
               <p className="mb-1 text-sm text-[#d8b89f]">30-minute focused session</p>
               <ul className="mb-6 mt-3 space-y-2 text-sm text-[#d8b89f]">
@@ -88,18 +100,58 @@ export default function ClientBookingPage() {
               </a>
             </div>
           </div>
+        </div>
 
-          {/* Upgrade Card */}
-          <div className="mt-5 rounded-[1.75rem] border p-7" style={{ borderColor: "rgba(184,135,70,0.6)", background: "rgba(184,135,70,0.12)" }}>
+        {/* Legacy Clients Only — Tier Business Review */}
+        <div className="rounded-[2rem] border border-[#b88746]/40 p-8" style={{ background: "rgba(184,135,70,0.08)" }}>
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div className="mb-1 inline-block rounded-full border border-[#b88746]/60 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#b88746]">
+                Legacy Clients Only
+              </div>
+              <h2 className="mt-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Tier Business Review</h2>
+              <p className="mt-1 text-sm text-[#d8b89f]">An exclusive deep-dive review of your business tier, progress, and next level strategy — reserved for long-standing clients.</p>
+            </div>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="rounded-[1.25rem] border border-white/10 p-5" style={{ background: "rgba(255,250,245,0.05)" }}>
+              <p className="mb-1 text-xs font-bold uppercase tracking-widest text-[#b88746]">Phase 1</p>
+              <p className="font-semibold text-[#f7efe7]">Business Audit</p>
+              <p className="mt-1 text-sm text-[#d8b89f]">Full review of your systems, offers, and revenue structure.</p>
+            </div>
+            <div className="rounded-[1.25rem] border border-white/10 p-5" style={{ background: "rgba(255,250,245,0.05)" }}>
+              <p className="mb-1 text-xs font-bold uppercase tracking-widest text-[#b88746]">Phase 2</p>
+              <p className="font-semibold text-[#f7efe7]">Growth Strategy</p>
+              <p className="mt-1 text-sm text-[#d8b89f]">Customized roadmap for scaling to your next income tier.</p>
+            </div>
+            <div className="rounded-[1.25rem] border border-white/10 p-5" style={{ background: "rgba(255,250,245,0.05)" }}>
+              <p className="mb-1 text-xs font-bold uppercase tracking-widest text-[#b88746]">Phase 3</p>
+              <p className="font-semibold text-[#f7efe7]">Execution Plan</p>
+              <p className="mt-1 text-sm text-[#d8b89f]">Step-by-step action items and accountability framework.</p>
+            </div>
+          </div>
+          <div className="mt-6">
+            <a
+              href="https://calendly.com/coachbrittbiz/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-full bg-[#b88746] px-6 py-3 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Book Your Tier Review
+            </a>
+          </div>
+        </div>
+
+        {/* Upgrade & Support */}
+        <div className="grid gap-5 md:grid-cols-2">
+          <div className="rounded-[1.75rem] border border-[#b88746]/60 p-7" style={{ background: "rgba(184,135,70,0.12)" }}>
             <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Upgrade Your Coaching</h3>
             <p className="mb-4 text-sm text-[#d8b89f]">Ready to move to a higher tier? Apply for a new coaching package.</p>
             <a href="https://tally.so/r/A768Vo" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-[#b88746] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
               Apply Now
             </a>
           </div>
-
-          {/* Support */}
-          <div className="mt-5 rounded-[1.75rem] border border-white/10 p-7" style={{ background: "rgba(255,250,245,0.06)" }}>
+          <div className="rounded-[1.75rem] border border-white/10 p-7" style={{ background: "rgba(255,250,245,0.06)" }}>
             <h3 className="mb-2 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Support</h3>
             <p className="mb-4 text-sm text-[#d8b89f]">Have a question between sessions? Reach out directly.</p>
             <a href="mailto:thecoachbrittmethod@gmail.com" className="inline-block rounded-full bg-[#b88746] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
@@ -108,8 +160,13 @@ export default function ClientBookingPage() {
           </div>
         </div>
 
-        {/* Meeting Notes */}
-        <MeetingNotesRequest />
+        {/* Session Notes Form — revealed when button clicked */}
+        {showNotesForm && (
+          <div id="notes-form">
+            <MeetingNotesRequest />
+          </div>
+        )}
+
       </main>
 
       <footer className="border-t border-white/10 px-6 py-6 text-center text-sm text-[#d8b89f]">
