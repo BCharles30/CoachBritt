@@ -4,7 +4,15 @@ import { useState, useEffect } from "react";
 export default function CoachBrittWebsite() {
   const profileImage = "/images/coach-britt-profile.png";
   const [menuOpen, setMenuOpen] = useState(false);
+  const [applicationOpen, setApplicationOpen] = useState(false);
   const [applicationSubmitted, setApplicationSubmitted] = useState(false);
+
+  const openApplication = () => {
+    setApplicationOpen(true);
+    setTimeout(() => {
+      document.getElementById("application")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   useEffect(() => {
     const handler = (e: MessageEvent) => {
@@ -171,9 +179,9 @@ export default function CoachBrittWebsite() {
                     <li>• Email support</li>
                   </ul>
                 </div>
-                <a href="#application" className="mt-8 block rounded-full border-2 border-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
+                <button onClick={openApplication} className="mt-8 block w-full rounded-full border-2 border-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
                   Work with Coach Britt
-                </a>
+                </button>
               </div>
               {/* Growth - Popular */}
               <div className="relative flex flex-col justify-between rounded-[1.75rem] border-2 border-[#b88746] bg-white p-8 shadow-lg md:scale-[1.03]" style={{ minHeight: "480px" }}>
@@ -191,9 +199,9 @@ export default function CoachBrittWebsite() {
                     <li>• Priority email support</li>
                   </ul>
                 </div>
-                <a href="#application" className="mt-8 block rounded-full bg-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                <button onClick={openApplication} className="mt-8 block w-full rounded-full bg-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
                   Apply for Coaching
-                </a>
+                </button>
               </div>
               {/* Scale */}
               <div className="flex flex-col justify-between rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm" style={{ minHeight: "480px" }}>
@@ -210,16 +218,16 @@ export default function CoachBrittWebsite() {
                     <li>• Voice note or Voxer-style support</li>
                   </ul>
                 </div>
-                <a href="#application" className="mt-8 block rounded-full border-2 border-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
+                <button onClick={openApplication} className="mt-8 block w-full rounded-full border-2 border-[#2d1f1a] px-6 py-3 text-center text-sm font-bold text-[#2d1f1a] transition hover:bg-[#2d1f1a] hover:text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>
                   Apply for Coaching
-                </a>
+                </button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Application */}
-        <section id="application" className="py-20">
+        {/* Application - only shown when user clicks apply */}
+        {applicationOpen && <section id="application" className="py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="mb-10 text-center">
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Coaching Application</p>
@@ -245,6 +253,8 @@ export default function CoachBrittWebsite() {
             </div>
           </div>
         </section>
+
+        }
 
         {/* Next Steps - only shown after application submitted */}
         {applicationSubmitted && (
