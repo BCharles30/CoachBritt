@@ -275,7 +275,8 @@ export default function ClientPortalPage() {
 
             </div>
           </div>
-          )} {/* end legacyVerified */}
+          </div>
+          )}
         </div>
 
         {/* Upgrade & Support */}
