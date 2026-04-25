@@ -4,8 +4,26 @@ import { useState } from "react"
 import Link from "next/link"
 import MeetingNotesRequest from "@/components/meeting-notes-request"
 
+const LEGACY_CLIENTS = ["ciara dickinson"]
+
 export default function ClientPortalPage() {
   const [showNotesForm, setShowNotesForm] = useState(false)
+  const [legacyFirstName, setLegacyFirstName] = useState("")
+  const [legacyLastName, setLegacyLastName] = useState("")
+  const [legacyVerified, setLegacyVerified] = useState(false)
+  const [legacyError, setLegacyError] = useState(false)
+  const [legacyFormOpen, setLegacyFormOpen] = useState(false)
+
+  const verifyLegacyClient = () => {
+    const fullName = `${legacyFirstName.trim()} ${legacyLastName.trim()}`.toLowerCase()
+    if (LEGACY_CLIENTS.includes(fullName)) {
+      setLegacyVerified(true)
+      setLegacyError(false)
+      setTimeout(() => document.getElementById("legacy-section")?.scrollIntoView({ behavior: "smooth" }), 100)
+    } else {
+      setLegacyError(true)
+    }
+  }
 
   return (
     <div className="min-h-screen text-[#f7efe7]" style={{ background: "#2d1f1a", fontFamily: "Arial, sans-serif" }}>
@@ -120,17 +138,65 @@ export default function ClientPortalPage() {
           </div>
         </div>
 
-        {/* Legacy Clients Only — Tier Business Review + Book Your Session */}
+        {/* Legacy Clients Only — gated by name verification */}
         <div className="rounded-[2rem] border border-[#b88746]/40 p-8" style={{ background: "rgba(184,135,70,0.08)" }}>
+          {/* Gate Header */}
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <div>
               <div className="mb-1 inline-block rounded-full border border-[#b88746]/60 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#b88746]">
                 Legacy Clients Only
               </div>
-              <h2 className="mt-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Tier Business Review</h2>
-              <p className="mt-1 text-sm text-[#d8b89f]">An exclusive deep-dive review of your business tier, progress, and next level strategy — reserved for long-standing clients.</p>
+              <h2 className="mt-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Legacy Client Access</h2>
+              <p className="mt-1 text-sm text-[#d8b89f]">This section is reserved for legacy coaching clients. Please verify your identity to continue.</p>
             </div>
           </div>
+
+          {/* Verification Form */}
+          {!legacyVerified && (
+            <div>
+              {!legacyFormOpen ? (
+                <button
+                  onClick={() => setLegacyFormOpen(true)}
+                  className="rounded-full border border-[#b88746] px-6 py-3 text-sm font-bold text-[#b88746] transition hover:bg-[#b88746] hover:text-[#1a0f0a]"
+                >
+                  I am a Legacy Client
+                </button>
+              ) : (
+                <div className="max-w-sm space-y-3">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    value={legacyFirstName}
+                    onChange={(e) => setLegacyFirstName(e.target.value)}
+                    className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-[#f7efe7] placeholder-[#a08060] outline-none focus:border-[#b88746]"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    value={legacyLastName}
+                    onChange={(e) => setLegacyLastName(e.target.value)}
+                    className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-[#f7efe7] placeholder-[#a08060] outline-none focus:border-[#b88746]"
+                    onKeyDown={(e) => e.key === "Enter" && verifyLegacyClient()}
+                  />
+                  {legacyError && (
+                    <p className="text-sm text-red-400">Name not found. Please check your spelling or contact Coach Britt.</p>
+                  )}
+                  <button
+                    onClick={verifyLegacyClient}
+                    className="rounded-full bg-[#b88746] px-6 py-3 text-sm font-bold text-white transition hover:opacity-90"
+                  >
+                    Verify Access
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Legacy Content — only shown after verification */}
+          {legacyVerified && (
+          <div id="legacy-section" className="mt-6">
+            <h3 className="mb-1 text-xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Tier Business Review</h3>
+            <p className="mb-5 text-sm text-[#d8b89f]">An exclusive deep-dive review of your business tier, progress, and next level strategy.</p>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-[1.25rem] border border-white/10 p-5" style={{ background: "rgba(255,250,245,0.05)" }}>
               <p className="mb-1 text-xs font-bold uppercase tracking-widest text-[#b88746]">Phase 1</p>
@@ -209,6 +275,7 @@ export default function ClientPortalPage() {
 
             </div>
           </div>
+          )} {/* end legacyVerified */}
         </div>
 
         {/* Upgrade & Support */}
