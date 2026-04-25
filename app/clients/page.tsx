@@ -52,6 +52,74 @@ export default function ClientPortalPage() {
           </div>
         </div>
 
+        {/* Package Session Booking */}
+        <div>
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]">Current Clients</p>
+          <h2 className="mb-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>Book Your Package Session</h2>
+          <p className="mb-6 text-sm text-[#d8b89f]">Select your active coaching package below to schedule your next session.</p>
+          <div className="grid gap-5 md:grid-cols-3">
+
+            {/* Foundation */}
+            <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.06)" }}>
+              <p className="mb-1 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]">Foundation</p>
+              <h3 className="mb-1 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>$197<span className="text-base font-normal text-[#d8b89f]">/mo</span></h3>
+              <ul className="mb-6 mt-4 space-y-2 text-sm text-[#d8b89f]">
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> 2x Monthly 1:1 Coaching</li>
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> Email Support</li>
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> Business Systems Review</li>
+              </ul>
+              <a
+                href="https://calendly.com/coachbrittbiz/foundation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto block rounded-full border border-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-[#b88746] transition hover:bg-[#b88746] hover:text-[#1a0f0a]"
+              >
+                Book Foundation Session
+              </a>
+            </div>
+
+            {/* Growth */}
+            <div className="flex flex-col rounded-[1.75rem] border-2 border-[#b88746] p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(184,135,70,0.12)" }}>
+              <div className="mb-2 inline-block self-start rounded-full bg-[#b88746] px-3 py-1 text-xs font-bold text-[#1a0f0a]">Most Popular</div>
+              <p className="mb-1 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]">Growth</p>
+              <h3 className="mb-1 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>$297<span className="text-base font-normal text-[#d8b89f]">/mo</span></h3>
+              <ul className="mb-6 mt-4 space-y-2 text-sm text-[#d8b89f]">
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> 4x Monthly 1:1 Coaching</li>
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> Priority Voxer Access</li>
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> Launch Strategy Support</li>
+              </ul>
+              <a
+                href="https://calendly.com/coachbrittbiz/growth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto block rounded-full bg-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-[#1a0f0a] transition hover:opacity-90"
+              >
+                Book Growth Session
+              </a>
+            </div>
+
+            {/* Scale */}
+            <div className="flex flex-col rounded-[1.75rem] border border-white/10 p-7 transition hover:-translate-y-1 hover:shadow-xl" style={{ background: "rgba(255,250,245,0.06)" }}>
+              <p className="mb-1 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]">Scale</p>
+              <h3 className="mb-1 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif" }}>$497<span className="text-base font-normal text-[#d8b89f]">/mo</span></h3>
+              <ul className="mb-6 mt-4 space-y-2 text-sm text-[#d8b89f]">
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> Weekly 1:1 Coaching</li>
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> Full Business Audit</li>
+                <li className="flex items-center gap-2"><span className="text-[#b88746]">&#10003;</span> VIP Voxer + Email Access</li>
+              </ul>
+              <a
+                href="https://calendly.com/coachbrittbiz/scale"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto block rounded-full border border-[#b88746] px-5 py-2.5 text-center text-sm font-bold text-[#b88746] transition hover:bg-[#b88746] hover:text-[#1a0f0a]"
+              >
+                Book Scale Session
+              </a>
+            </div>
+
+          </div>
+        </div>
+
         {/* Session Booking */}
         <div id="booking">
           <h2 className="mb-2 text-2xl font-bold text-[#f7efe7]" style={{ fontFamily: "Georgia, serif", borderBottom: "1px solid rgba(255,250,245,0.15)", paddingBottom: "8px" }}>Book Your Session</h2>
