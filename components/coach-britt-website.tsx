@@ -134,25 +134,45 @@ export default function CoachBrittWebsite() {
           </div>
         </section>
 
-        {/* Pathway */}
+        {/* You bought the guide, now what? */}
         <section id="pathway" className="bg-[#fffaf5] py-20">
-          <div className="mx-auto max-w-6xl px-6 text-center lg:px-8">
-            <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">A simple path from digital product to coaching client.</h2>
-            <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
-              The redesign makes your site feel intentional: learn first, build trust, then invite them into your signature coaching offer.
-            </p>
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.13em] text-[#b88746]" style={{ fontFamily: "Arial, sans-serif" }}>Next Steps</p>
+              <h2 className="mb-4 text-4xl font-bold text-[#2d1f1a] md:text-5xl">You bought the guide, now what?</h2>
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#5a3f35]" style={{ fontFamily: "Arial, sans-serif" }}>
+                The guide gives you the blueprint. But if you are ready for real accountability, a personalized plan, and someone in your corner — here is how to take the next step with Coach Britt.
+              </p>
+            </div>
             <div className="grid gap-6 md:grid-cols-3">
-              {[
-                { step: "1", title: "Buy the guide", desc: "They purchase the digital product and get an immediate win with business clarity." },
-                { step: "2", title: "Apply the system", desc: "They start organizing their business, but may realize they want accountability and direction." },
-                { step: "3", title: "Work with Coach Britt", desc: "They move into coaching when they are ready for personalized strategy and support." },
-              ].map((item) => (
-                <div key={item.step} className="rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm text-left">
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#2d1f1a] text-sm font-bold text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>{item.step}</div>
-                  <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>{item.desc}</p>
-                </div>
-              ))}
+              <div className="rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm text-left">
+                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#2d1f1a] text-sm font-bold text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>1</div>
+                <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">Implement what you learned</h3>
+                <p className="text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Work through the Scalable Offer Launch Guide. Clarify your offer, map your launch plan, and identify what needs to be built.
+                </p>
+              </div>
+              <div className="rounded-[1.75rem] border border-[#d8b89f]/40 bg-white p-8 shadow-sm text-left">
+                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#2d1f1a] text-sm font-bold text-[#f7efe7]" style={{ fontFamily: "Arial, sans-serif" }}>2</div>
+                <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">Notice where you get stuck</h3>
+                <p className="text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  Most women hit a wall — whether it is mindset, strategy, or knowing what to do next. That is exactly where coaching comes in.
+                </p>
+              </div>
+              <div className="rounded-[1.75rem] border border-[#b88746]/40 bg-[#fffaf5] p-8 shadow-sm text-left" style={{ borderWidth: "2px" }}>
+                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#b88746] text-sm font-bold text-white" style={{ fontFamily: "Arial, sans-serif" }}>3</div>
+                <h3 className="mb-3 text-2xl font-bold text-[#5a3f35]">Apply for coaching support</h3>
+                <p className="mb-5 text-sm leading-relaxed text-[#654d43]" style={{ fontFamily: "Arial, sans-serif" }}>
+                  If you are ready for a personalized strategy, monthly accountability, and hands-on business coaching — choose a tier and apply to work with Coach Britt.
+                </p>
+                <button
+                  onClick={openApplication}
+                  className="rounded-full bg-[#2d1f1a] px-6 py-3 text-sm font-bold text-[#f7efe7] transition hover:bg-[#5a3f35]"
+                  style={{ fontFamily: "Arial, sans-serif" }}
+                >
+                  Apply for Coaching
+                </button>
+              </div>
             </div>
           </div>
         </section>
